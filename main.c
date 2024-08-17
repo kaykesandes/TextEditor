@@ -63,6 +63,7 @@ void editorProcessKeypress()
     switch (c)
     {
     case CTRL_KEY('q'):
+
         exit(0);
         break;
 
@@ -82,6 +83,7 @@ void editorDrawRows()
 
 void editorRefreshScreen()
 {
+    write(STDOUT_FILENO, "\033[H\033[J", 6);
     write(STDOUT_FILENO, "\x1b[H", 3);
 
     editorDrawRows();
@@ -91,7 +93,7 @@ void editorRefreshScreen()
 
 int main()
 {
-    printf("\e[1;1H\e[2J");
+
     enableRawMode();
 
     while (1)
