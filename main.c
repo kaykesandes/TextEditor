@@ -66,6 +66,7 @@ char editorReadKey()
     return (c);
 }
 
+
 int getWindowSize(int *rows, int *cols)
 {
     struct winsize ws;
