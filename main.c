@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <termios.h>
+#include <ncurses.h>
 
 /* DEFINES */
 #define CTRL_KEY(k) ((k) & 0x1f)
@@ -63,7 +64,6 @@ void editorProcessKeypress()
     switch (c)
     {
     case CTRL_KEY('q'):
-
         exit(0);
         break;
 
